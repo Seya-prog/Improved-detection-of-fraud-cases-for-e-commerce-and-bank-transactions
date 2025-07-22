@@ -1,0 +1,16 @@
+version: 2
+updates:
+  # Enable version updates for Python packages
+  - package-ecosystem: "pip"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    open-pull-requests-limit: 10
+    target-branch: "main"
+    # Only allow security updates to be automated
+    allow:
+      - dependency-type: "direct"
+    # Labels on pull requests for security and version updates
+    labels:
+      - "dependencies"
+      - "security" 
