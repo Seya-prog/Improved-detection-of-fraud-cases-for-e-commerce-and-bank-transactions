@@ -26,6 +26,11 @@ jobs:
         python -m pip install --upgrade pip
         pip install flake8 pytest pytest-cov
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+    
+    - name: Set up directory structure
+      run: |
+        mkdir -p data/raw data/processed models
+        touch data/raw/.gitkeep data/processed/.gitkeep models/.gitkeep
         
     - name: Lint with flake8
       run: |

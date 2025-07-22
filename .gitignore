@@ -1,5 +1,7 @@
 # Python
 __pycache__/
+*/__pycache__/
+*/*/__pycache__/
 *.py[cod]
 *$py.class
 *.so
@@ -41,6 +43,7 @@ venv.bak/
 *.xls
 *.db
 *.sqlite
+*.npy
 data/raw/
 data/processed/
 
@@ -55,13 +58,21 @@ models/*.h5
 models/*.pt
 models/*.pb
 models/*.onnx
+models/*.json
 !models/.gitkeep
+
+# Results directory
+results/*
+!results/.gitkeep
 
 # IDE files
 .idea/
 .vscode/
 *.swp
 *.swo
+.spyderproject
+.spyproject
+.ropeproject
 
 # OS files
 .DS_Store
@@ -84,4 +95,23 @@ nosetests.xml
 coverage.xml
 *.cover
 .hypothesis/
-.pytest_cache/ 
+.pytest_cache/
+cov.xml
+coverage/
+coverage-reports/
+
+# Matplotlib
+.matplotlib/
+*/.matplotlib/
+
+# Additional files
+*.tmp
+*.bak
+*.swp
+*~
+training.log
+prediction.log
+
+# Python environment
+pip-log.txt
+pip-delete-this-directory.txt 
